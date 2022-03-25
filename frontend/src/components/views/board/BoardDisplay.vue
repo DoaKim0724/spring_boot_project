@@ -1,38 +1,38 @@
 <template>
     <v-card color="basil">
-    <v-card-title class="text-center justify-center py-6">
-      <h1 class="font-weight-bold text-h2 basil--text">
-        : Life recorD
-      </h1>
-    </v-card-title>
+        <v-card-title class="text-center justify-center py-6">
+        <h1 class="font-weight-bold text-h2 basil--text">
+            : Life recorD
+        </h1>
+        </v-card-title>
 
-    <v-tabs
-      v-model="tab"
-      background-color="transparent"
-      color="basil"
-      grow
-    >
-      <v-tab
-        v-for="item in items"
-        :key="item"
-      >
-        {{ item }}
-      </v-tab>
-    </v-tabs>
-
-    <v-tabs-items v-model="tab">
-      <v-tab-item
-        v-for="item in items"
-        :key="item"
-      >
-        <v-card
-          color="basil"
-          flat
+        <v-tabs
+        v-model="tab"
+        background-color="transparent"
+        color="basil"
+        grow
         >
-          <v-card-text>{{ text }}</v-card-text>
-        </v-card>
-      </v-tab-item>
-    </v-tabs-items>
+        <v-tab
+            v-for="item in items"
+            :key="item"
+        >
+            {{ item }}
+        </v-tab>
+        </v-tabs>
+
+        <v-tabs-items v-model="tab">
+        <v-tab-item
+            v-for="item in items"
+            :key="item"
+        >
+            <v-card
+            color="basil"
+            flat
+            >
+            <v-card-text>{{ text }}</v-card-text>
+            </v-card>
+        </v-tab-item>
+        </v-tabs-items>
   </v-card>
 </template>
 
@@ -40,7 +40,6 @@
 import Vue from 'vue'
 export default Vue.extend({
     data: () => ({
-        image: "https://reqres.in/img/faces/1-image.jpg",
         tab: null,
         items: [
           'Appetizers', 'Entrees', 'Deserts', 'Cocktails',
